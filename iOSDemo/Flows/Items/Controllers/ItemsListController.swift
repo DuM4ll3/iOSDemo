@@ -10,4 +10,11 @@ import UIKit
 
 final class ItemsListController: UIViewController, ItemsListView {
     var onItemSelect: ((ItemList) -> ())?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let manager = BeerManager()
+        manager.requestBeer()
+    }
 }

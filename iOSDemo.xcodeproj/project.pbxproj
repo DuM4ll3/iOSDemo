@@ -12,8 +12,6 @@
 		537E3930210F6380005A7997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537E392E210F6380005A7997 /* Main.storyboard */; };
 		537E3932210F6382005A7997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537E3931210F6382005A7997 /* Assets.xcassets */; };
 		537E3935210F6382005A7997 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537E3933210F6382005A7997 /* LaunchScreen.storyboard */; };
-		537E394321105144005A7997 /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537E394221105144005A7997 /* GitHubService.swift */; };
-		537E3945211071CA005A7997 /* GitHubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537E3944211071CA005A7997 /* GitHubModel.swift */; };
 		537E3948211078E6005A7997 /* IssueTrackerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537E3947211078E6005A7997 /* IssueTrackerManager.swift */; };
 		537E39542110C357005A7997 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537E39532110C357005A7997 /* Storyboards.swift */; };
 		537E395A2111B880005A7997 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537E39592111B880005A7997 /* UIViewControllerExtensions.swift */; };
@@ -44,6 +42,11 @@
 		539B5BBD21133768002014B2 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539B5BBC21133768002014B2 /* SettingsController.swift */; };
 		539B5BBF2113379B002014B2 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539B5BBE2113379B002014B2 /* SettingsCoordinator.swift */; };
 		539B5BC1211337D1002014B2 /* SettingsModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539B5BC0211337D1002014B2 /* SettingsModuleFactory.swift */; };
+		539B5BC321134453002014B2 /* BeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539B5BC221134453002014B2 /* BeerService.swift */; };
+		539B5BC621134674002014B2 /* MockedBeer.json in Resources */ = {isa = PBXBuildFile; fileRef = 539B5BC521134674002014B2 /* MockedBeer.json */; };
+		539B5BC9211354D6002014B2 /* BeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539B5BC8211354D6002014B2 /* BeerManager.swift */; };
+		539B5BCB21135787002014B2 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539B5BCA21135787002014B2 /* Networkable.swift */; };
+		539B5BCD21135A65002014B2 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539B5BCC21135A65002014B2 /* Beer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,8 +58,6 @@
 		537E3931210F6382005A7997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		537E3934210F6382005A7997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		537E3936210F6382005A7997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		537E394221105144005A7997 /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
-		537E3944211071CA005A7997 /* GitHubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubModel.swift; sourceTree = "<group>"; };
 		537E3947211078E6005A7997 /* IssueTrackerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTrackerManager.swift; sourceTree = "<group>"; };
 		537E39532110C357005A7997 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		537E39592111B880005A7997 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
@@ -87,6 +88,11 @@
 		539B5BBC21133768002014B2 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		539B5BBE2113379B002014B2 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		539B5BC0211337D1002014B2 /* SettingsModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModuleFactory.swift; sourceTree = "<group>"; };
+		539B5BC221134453002014B2 /* BeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerService.swift; sourceTree = "<group>"; };
+		539B5BC521134674002014B2 /* MockedBeer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockedBeer.json; sourceTree = "<group>"; };
+		539B5BC8211354D6002014B2 /* BeerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerManager.swift; sourceTree = "<group>"; };
+		539B5BCA21135787002014B2 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		539B5BCC21135A65002014B2 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		D57A0D66C48B52F3150A75A6 /* Pods-iOSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSDemo/Pods-iOSDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,8 +146,9 @@
 		537E393C210F6F56005A7997 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				537E394221105144005A7997 /* GitHubService.swift */,
-				537E3944211071CA005A7997 /* GitHubModel.swift */,
+				539B5BC421134636002014B2 /* MockedResponses */,
+				539B5BC221134453002014B2 /* BeerService.swift */,
+				539B5BCC21135A65002014B2 /* Beer.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -150,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				537E3947211078E6005A7997 /* IssueTrackerManager.swift */,
+				539B5BC8211354D6002014B2 /* BeerManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 				537E395D2111BA17005A7997 /* Coordinator.swift */,
 				537E395F2111BB00005A7997 /* BaseView.swift */,
 				537E39612111BBBC005A7997 /* Presentable.swift */,
+				539B5BCA21135787002014B2 /* Networkable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -316,6 +325,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		539B5BC421134636002014B2 /* MockedResponses */ = {
+			isa = PBXGroup;
+			children = (
+				539B5BC521134674002014B2 /* MockedBeer.json */,
+			);
+			path = MockedResponses;
+			sourceTree = "<group>";
+		};
 		84E541B4AD920BED946BF6F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +412,7 @@
 			files = (
 				537E3935210F6382005A7997 /* LaunchScreen.storyboard in Resources */,
 				539B5BAD21133204002014B2 /* Items.storyboard in Resources */,
+				539B5BC621134674002014B2 /* MockedBeer.json in Resources */,
 				537E3932210F6382005A7997 /* Assets.xcassets in Resources */,
 				537E3930210F6380005A7997 /* Main.storyboard in Resources */,
 				539B5BB721133678002014B2 /* Settings.storyboard in Resources */,
@@ -463,22 +481,23 @@
 			files = (
 				539B5BC1211337D1002014B2 /* SettingsModuleFactory.swift in Sources */,
 				537E39542110C357005A7997 /* Storyboards.swift in Sources */,
+				539B5BCB21135787002014B2 /* Networkable.swift in Sources */,
 				537E395C2111B8E6005A7997 /* NSObjectExtensions.swift in Sources */,
-				537E3945211071CA005A7997 /* GitHubModel.swift in Sources */,
 				539B5BB321133421002014B2 /* TabbarController.swift in Sources */,
 				539B5BA0211209BC002014B2 /* ItemModuleFactory.swift in Sources */,
+				539B5BC9211354D6002014B2 /* BeerManager.swift in Sources */,
 				537E39672111C179005A7997 /* RouterImp.swift in Sources */,
 				537E39602111BB00005A7997 /* BaseView.swift in Sources */,
 				539B5B8E2111F86C002014B2 /* ApplicationCoordinator.swift in Sources */,
 				539B5B9321120392002014B2 /* ItemsListController.swift in Sources */,
 				539B5BB1211333B4002014B2 /* TabbarView.swift in Sources */,
-				537E394321105144005A7997 /* GitHubService.swift in Sources */,
 				539B5BA321120AD9002014B2 /* CoordinatorFactory.swift in Sources */,
 				539B5B912112034A002014B2 /* ItemsListView.swift in Sources */,
 				539B5BB52113346E002014B2 /* TabbarCoordinator.swift in Sources */,
 				539B5BBD21133768002014B2 /* SettingsController.swift in Sources */,
 				539B5BA521120B56002014B2 /* ModuleFactoryImp.swift in Sources */,
 				537E395A2111B880005A7997 /* UIViewControllerExtensions.swift in Sources */,
+				539B5BCD21135A65002014B2 /* Beer.swift in Sources */,
 				539B5B9B21120778002014B2 /* ItemDetailView.swift in Sources */,
 				537E392B210F6380005A7997 /* AppDelegate.swift in Sources */,
 				537E39652111C13C005A7997 /* Router.swift in Sources */,
@@ -488,6 +507,7 @@
 				539B5B96211203C7002014B2 /* ItemCoordinator.swift in Sources */,
 				537E39622111BBBC005A7997 /* Presentable.swift in Sources */,
 				539B5BBF2113379B002014B2 /* SettingsCoordinator.swift in Sources */,
+				539B5BC321134453002014B2 /* BeerService.swift in Sources */,
 				537E395E2111BA17005A7997 /* Coordinator.swift in Sources */,
 				539B5B9921120471002014B2 /* ItemList.swift in Sources */,
 				537E3948211078E6005A7997 /* IssueTrackerManager.swift in Sources */,
