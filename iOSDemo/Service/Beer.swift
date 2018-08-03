@@ -15,13 +15,13 @@ struct Beer: Mappable {
     let firstBrewed: String
     let description: String
     let imageURL: String
-    let abv: Int
+    let abv: Float
     let ibu: Int
     let targetFg: Int
     let targetOg: Int
     let ebc: Int
     let srm: Int
-    let ph: Int
+    let ph: Double
     let attenuationLevel: Int
     let foodPairing: [String]
     let brewersTips: String

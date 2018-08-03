@@ -13,18 +13,18 @@ import RxSwift
 
 struct BeerManager: Networkable {
     
-    func requestBeer() -> Observable<Beer?> {
-//        provider.request(.beers) { (result) in
-//            switch result {
-//            case let .success(moyaResponse): print(moyaResponse.data)
-//            case let .failure(error): print(error.errorDescription)
-//            }
-//        }
-        
-        return provider.rx
+    func requestBeer() {
+        // Make sure you retain the provider or the dependency chain that it holds somewhere, as they will get deallocated if you fail to do so.
+        let beerProvider = provider
+        beerProvider.rx
             .request(.beers)
             .debug()
-            .mapOptional(to: Beer.self)
-            .asObservable()
+            .mapOptional(to: [Beer].self)
+            .subscribe({ (event) in
+                switch event {
+                case let .success(beers): print(beers?.first?.foodPairing.debugDescription)
+                case let .error(error): print(error.localizedDescription)
+                }
+            })
     }
 }
