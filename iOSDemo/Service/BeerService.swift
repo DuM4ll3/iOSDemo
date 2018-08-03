@@ -19,7 +19,7 @@ extension BeerApi: TargetType {
     
     var path: String {
         switch self {
-        case .beers: return "/beers/1"
+        case .beers: return "/beers"
         }
     }
     

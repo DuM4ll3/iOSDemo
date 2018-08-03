@@ -11,20 +11,15 @@ import Moya_ModelMapper
 import RxOptional
 import RxSwift
 
-struct BeerManager: Networkable {
+struct BeerManager {
+    let provider: MoyaProvider<BeerApi>
     
-    func requestBeer() {
-        // Make sure you retain the provider or the dependency chain that it holds somewhere, as they will get deallocated if you fail to do so.
-        let beerProvider = provider
-        beerProvider.rx
+    func listBeers() -> Observable<[Beer]> {
+        return provider.rx
             .request(.beers)
             .debug()
             .mapOptional(to: [Beer].self)
-            .subscribe({ (event) in
-                switch event {
-                case let .success(beers): print(beers?.first?.foodPairing.debugDescription)
-                case let .error(error): print(error.localizedDescription)
-                }
-            })
+            .asObservable()
+            .replaceNilWith([])
     }
 }

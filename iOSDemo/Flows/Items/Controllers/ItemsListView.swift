@@ -6,6 +6,9 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
+import RxSwift
+
 protocol ItemsListView: BaseView {
-    var onItemSelect: ((ItemList) -> ())? { get set }
+    var onItemsDidLoad: (() -> Observable<[Beer]>)? { get set }
+    var onItemSelect: ((ItemList) -> Void)? { get set }
 }

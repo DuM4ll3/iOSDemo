@@ -9,7 +9,7 @@
 import UIKit
 
 protocol TabbarView: BaseView {
-    var onItemFlowSelect: ((UINavigationController) -> ())? { get set }
-    var onSettingsFlowSelect: ((UINavigationController) -> ())? { get set }
-    var onViewDidLoad: ((UINavigationController) -> ())? { get set }
+    var onItemFlowSelect: ((UINavigationController) -> Void)? { get set }
+    var onSettingsFlowSelect: ((UINavigationController) -> Void)? { get set }
+    var onViewDidLoad: ((UINavigationController) -> Void)? { get set }
 }
