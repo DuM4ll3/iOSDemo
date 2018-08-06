@@ -22,6 +22,7 @@ final class ItemCoordinator: BaseCoordinator {
     
     //MARK: - Run current flow's controllers
     private func showItemList() {
+        // TODO: move these dependecies elsewhere
         let provider = MoyaProvider<BeerApi>(plugins: [NetworkLoggerPlugin(verbose: true)])
         let manager = BeerManager(provider: provider)
         

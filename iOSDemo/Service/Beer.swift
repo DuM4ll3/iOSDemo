@@ -16,6 +16,10 @@ struct Beer: Mappable {
     let description: String
     let imageURL: String
     let abv: Double
+    /*
+     FIX: can't parse numeric types. sometimes using Int works for an object sometimes not.
+        same with using Float.
+     */
 //    let ibu: Int
 //    let targetFg: Float
 //    let targetOg: Float

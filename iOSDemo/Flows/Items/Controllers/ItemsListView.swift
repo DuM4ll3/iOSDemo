@@ -9,6 +9,6 @@
 import RxSwift
 
 protocol ItemsListView: BaseView {
-    var onItemsDidLoad: (() -> Observable<[Beer]>)? { get set }
+    var onItemsDidLoad: (() -> Observable<[ItemList]>)? { get set }
     var onItemSelect: ((ItemList) -> Void)? { get set }
 }

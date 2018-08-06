@@ -6,7 +6,4 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
-struct ItemList {
-    let title: String
-    let subtitle: String
-}
+typealias ItemList = Beer
