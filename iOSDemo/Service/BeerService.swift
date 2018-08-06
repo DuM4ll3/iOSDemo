@@ -19,6 +19,7 @@ extension BeerApi: TargetType {
     
     var path: String {
         switch self {
+        // TODO: implement query string
         case .beers: return "/beers"
         }
     }

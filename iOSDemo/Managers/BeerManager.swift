@@ -17,9 +17,27 @@ struct BeerManager {
     func listBeers() -> Observable<[Beer]> {
         return provider.rx
             .request(.beers)
-            .debug()
+            .debug(#function)
             .mapOptional(to: [Beer].self)
             .asObservable()
             .replaceNilWith([])
+            .do(onNext: { (beers) in
+                print("onNext")
+            },
+                onError: { (error) in
+                    print(error.localizedDescription)
+            },
+                onCompleted: {
+                    print("onCompleted")
+            },
+                onSubscribe: {
+                    print("onSub")
+            },
+                onSubscribed: {
+                    print("onSubed")
+            },
+                onDispose: {
+                    print("onDispose")
+            })
     }
 }
