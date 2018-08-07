@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func debugMemoryLeaks() {
         _ = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
             .subscribe(onNext: { _ in
-                print("RxSwift Resource count: \(RxSwift.Resources.total)")
+                print("RxSwift[\(#function)]: \(RxSwift.Resources.total)")
             })
     }
 }

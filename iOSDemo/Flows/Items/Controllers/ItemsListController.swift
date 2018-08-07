@@ -28,6 +28,8 @@ final class ItemsListController: UIViewController, ItemsListView {
         
         onItemsDidLoad?()
             .bind(to: tableView.rx.items(cellIdentifier: "Cell")) { (row, item, cell) in
+                // TODO: create a customTableViewCell: UITableViewCell with the model (item) field
+                // and use its didSet to setup de cell's views - cell.item = item
                 cell.textLabel?.text = item.name
             }
             .disposed(by: disposeBag)

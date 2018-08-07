@@ -15,11 +15,13 @@ struct BeerManager {
     let provider: MoyaProvider<BeerApi>
     
     func listBeers() -> Observable<[Beer]> {
+        // TODO: move the 'do' to the coordinator
         return provider.rx
-            .request(.beers)
+            .request(.beers(page: 1, perPage: 5))
             .debug(#function)
-            .mapOptional(to: [Beer].self)
             .asObservable()
+            .single()
+            .mapOptional(to: [Beer].self)
             .replaceNilWith([])
             .do(onNext: { (beers) in
                 print("onNext")

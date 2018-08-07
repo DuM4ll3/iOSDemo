@@ -362,6 +362,7 @@
 				537E3924210F6380005A7997 /* Frameworks */,
 				537E3925210F6380005A7997 /* Resources */,
 				60080132DB1F68946586CE97 /* [CP] Embed Pods Frameworks */,
+				539B5BD02119BF31002014B2 /* Raise Comment Tags */,
 			);
 			buildRules = (
 			);
@@ -422,6 +423,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		539B5BD02119BF31002014B2 /* Raise Comment Tags */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Raise Comment Tags";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# script to raise comment tags on build phase\nTAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR:\"\nfind \".\" \\( -name \"*.swift\" \\) -not -path \"./Pods/*\" -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"";
+		};
 		597E3CB22043B20BE6C2AB37 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
