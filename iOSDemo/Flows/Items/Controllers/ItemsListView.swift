@@ -6,9 +6,9 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
-import RxSwift
+import RxCocoa
 
 protocol ItemsListView: BaseView {
-    var onItemsDidLoad: (() -> Observable<[ItemList]>)? { get set }
+    var onItemsDidLoad: (() -> Driver<[ItemList]>)? { get set }
     var onItemSelect: ((ItemList) -> Void)? { get set }
 }

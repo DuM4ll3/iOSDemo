@@ -6,12 +6,11 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
-import Moya
-import RxSwift
-
 final class ItemCoordinator: BaseCoordinator {
     private let factory: ItemModuleFactory
     private let router: Router
+    // TODO: implement DI for manager
+    private lazy var manager: BeerManager = BeerManager()
     
     init(router: Router, factory: ItemModuleFactory) {
         self.router = router
@@ -22,12 +21,9 @@ final class ItemCoordinator: BaseCoordinator {
     
     //MARK: - Run current flow's controllers
     private func showItemList() {
-        // TODO: move these dependecies to the viewModel/repository
-        let provider = MoyaProvider<BeerApi>(plugins: [NetworkLoggerPlugin(verbose: true)])
-        let manager = BeerManager(provider: provider)
         
         let itemsOutput = factory.makeItemsOutput()
-        itemsOutput.onItemsDidLoad = { return manager.listBeers() }
+        itemsOutput.onItemsDidLoad = { return self.manager.beers }
         itemsOutput.onItemSelect = { [weak self] (item) in
             self?.showItemDetail(item)
         }

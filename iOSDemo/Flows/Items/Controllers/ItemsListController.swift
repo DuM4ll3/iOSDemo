@@ -15,7 +15,7 @@ final class ItemsListController: UIViewController, ItemsListView {
     @IBOutlet weak var tableView: UITableView!
     
     var onItemSelect: ((ItemList) -> Void)?
-    var onItemsDidLoad: (() -> Observable<[ItemList]>)?
+    var onItemsDidLoad: (() -> Driver<[ItemList]>)?
     
     private let disposeBag = DisposeBag()
     
@@ -27,13 +27,11 @@ final class ItemsListController: UIViewController, ItemsListView {
     private func setup() {
         
         onItemsDidLoad?()
-            .bind(to: tableView.rx.items(cellIdentifier: "Cell")) { (row, item, cell) in
-                // TODO: create a customTableViewCell: UITableViewCell with the model (item) field
-                // and use its didSet to setup de cell's views - cell.item = item
-                cell.textLabel?.text = item.name
+            .drive(tableView.rx.items(cellIdentifier: "Cell", cellType: ItemListCellView.self)) { (row, item, cell) in
+                cell.item = item
             }
             .disposed(by: disposeBag)
-        
+
         tableView.rx
             .modelSelected(ItemList.self)
             .subscribe { [onItemSelect] (selected) in

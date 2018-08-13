@@ -46,7 +46,7 @@
 		539B5BC621134674002014B2 /* MockedBeer.json in Resources */ = {isa = PBXBuildFile; fileRef = 539B5BC521134674002014B2 /* MockedBeer.json */; };
 		539B5BC9211354D6002014B2 /* BeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539B5BC8211354D6002014B2 /* BeerManager.swift */; };
 		539B5BCD21135A65002014B2 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539B5BCC21135A65002014B2 /* Beer.swift */; };
-		539B5BCF2114AE7D002014B2 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539B5BCE2114AE7C002014B2 /* Networkable.swift */; };
+		539B5BD3211AE25C002014B2 /* ItemListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539B5BD2211AE25C002014B2 /* ItemListCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,7 +92,7 @@
 		539B5BC521134674002014B2 /* MockedBeer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockedBeer.json; sourceTree = "<group>"; };
 		539B5BC8211354D6002014B2 /* BeerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerManager.swift; sourceTree = "<group>"; };
 		539B5BCC21135A65002014B2 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
-		539B5BCE2114AE7C002014B2 /* Networkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		539B5BD2211AE25C002014B2 /* ItemListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListCellView.swift; sourceTree = "<group>"; };
 		D57A0D66C48B52F3150A75A6 /* Pods-iOSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSDemo/Pods-iOSDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,7 +197,6 @@
 		537E39572111B7FE005A7997 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				539B5BCE2114AE7C002014B2 /* Networkable.swift */,
 				537E395D2111BA17005A7997 /* Coordinator.swift */,
 				537E395F2111BB00005A7997 /* BaseView.swift */,
 				537E39612111BBBC005A7997 /* Presentable.swift */,
@@ -264,6 +263,7 @@
 		539B5B972112045C002014B2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				539B5BD1211AE212002014B2 /* CellModels */,
 				539B5B9821120471002014B2 /* ItemList.swift */,
 			);
 			path = Models;
@@ -331,6 +331,14 @@
 				539B5BC521134674002014B2 /* MockedBeer.json */,
 			);
 			path = MockedResponses;
+			sourceTree = "<group>";
+		};
+		539B5BD1211AE212002014B2 /* CellModels */ = {
+			isa = PBXGroup;
+			children = (
+				539B5BD2211AE25C002014B2 /* ItemListCellView.swift */,
+			);
+			path = CellModels;
 			sourceTree = "<group>";
 		};
 		84E541B4AD920BED946BF6F8 /* Frameworks */ = {
@@ -501,7 +509,6 @@
 				539B5BA0211209BC002014B2 /* ItemModuleFactory.swift in Sources */,
 				539B5BC9211354D6002014B2 /* BeerManager.swift in Sources */,
 				537E39672111C179005A7997 /* RouterImp.swift in Sources */,
-				539B5BCF2114AE7D002014B2 /* Networkable.swift in Sources */,
 				537E39602111BB00005A7997 /* BaseView.swift in Sources */,
 				539B5B8E2111F86C002014B2 /* ApplicationCoordinator.swift in Sources */,
 				539B5B9321120392002014B2 /* ItemsListController.swift in Sources */,
@@ -513,6 +520,7 @@
 				539B5BA521120B56002014B2 /* ModuleFactoryImp.swift in Sources */,
 				537E395A2111B880005A7997 /* UIViewControllerExtensions.swift in Sources */,
 				539B5BCD21135A65002014B2 /* Beer.swift in Sources */,
+				539B5BD3211AE25C002014B2 /* ItemListCellView.swift in Sources */,
 				539B5B9B21120778002014B2 /* ItemDetailView.swift in Sources */,
 				537E392B210F6380005A7997 /* AppDelegate.swift in Sources */,
 				537E39652111C13C005A7997 /* Router.swift in Sources */,
