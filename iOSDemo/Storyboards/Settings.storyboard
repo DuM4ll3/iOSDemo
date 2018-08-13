@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings Controller-->
+        <!--User Settings-->
         <scene sceneID="GMa-EZ-1QN">
             <objects>
                 <viewController storyboardIdentifier="SettingsController" id="ASq-I6-9pe" customClass="SettingsController" customModule="iOSDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,6 +32,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c1X-oR-DlR"/>
                     </view>
+                    <navigationItem key="navigationItem" title="User Settings" id="dqo-ym-4IS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Dq-3y-Mbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

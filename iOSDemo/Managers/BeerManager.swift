@@ -28,7 +28,7 @@ struct BeerManager {
             .debug(#function)
             .asObservable()
             .single()
-//            .filterSuccessfulStatusAndRedirectCodes()
+            .filterSuccessfulStatusAndRedirectCodes()
 //            .catchErrorJustReturn(<#T##element: Response##Response#>)
             .mapOptional(to: [Beer].self)
             .replaceNilWith([])

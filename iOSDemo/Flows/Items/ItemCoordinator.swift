@@ -9,7 +9,7 @@
 final class ItemCoordinator: BaseCoordinator {
     private let factory: ItemModuleFactory
     private let router: Router
-    // TODO: implement DI for manager
+    
     private lazy var manager: BeerManager = BeerManager()
     
     init(router: Router, factory: ItemModuleFactory) {

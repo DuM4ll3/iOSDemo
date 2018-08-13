@@ -14,6 +14,7 @@ final class ItemListCellView: UITableViewCell {
         didSet {
             guard let item = item else { return }
             textLabel?.text = item.name
+            detailTextLabel?.text = item.tagline
         }
     }
 }

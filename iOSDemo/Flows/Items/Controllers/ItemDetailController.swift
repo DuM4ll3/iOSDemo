@@ -7,16 +7,24 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class ItemDetailController: UIViewController, ItemDetailView {
     
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var itemImageView: UIImageView!
+    @IBOutlet weak var taglineLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     var itemList: ItemList?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        nameLabel.text = itemList?.name
+        guard let item = itemList else { return }
+
+        title = item.name
+        let url = URL(string: item.imageURL)
+        itemImageView.kf.setImage(with: url)
+        taglineLabel.text = item.tagline
+        descriptionLabel.text = item.description
     }
 }
