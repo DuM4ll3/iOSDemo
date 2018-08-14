@@ -56,21 +56,30 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhg-9L-fk9">
+                                <rect key="frame" x="92.5" y="229" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hhg-9L-fk9" firstAttribute="centerY" secondItem="u9A-GX-4HJ" secondAttribute="centerY" id="0RQ-RF-snS"/>
                             <constraint firstItem="QSr-VM-IN6" firstAttribute="leading" secondItem="goy-3p-u67" secondAttribute="leading" id="0iY-2d-vQz"/>
                             <constraint firstItem="QSr-VM-IN6" firstAttribute="top" secondItem="S0d-dN-lTj" secondAttribute="bottom" id="BPb-bg-L1O"/>
                             <constraint firstItem="S0d-dN-lTj" firstAttribute="trailing" secondItem="goy-3p-u67" secondAttribute="trailing" id="UrR-nN-y3E"/>
                             <constraint firstItem="S0d-dN-lTj" firstAttribute="top" secondItem="goy-3p-u67" secondAttribute="top" id="b5s-CP-ASr"/>
                             <constraint firstItem="QSr-VM-IN6" firstAttribute="bottom" secondItem="goy-3p-u67" secondAttribute="bottom" id="dnV-dd-j4R"/>
                             <constraint firstItem="S0d-dN-lTj" firstAttribute="leading" secondItem="goy-3p-u67" secondAttribute="leading" id="i9v-h5-ycr"/>
+                            <constraint firstItem="hhg-9L-fk9" firstAttribute="centerX" secondItem="u9A-GX-4HJ" secondAttribute="centerX" id="imx-uw-Nhx"/>
                             <constraint firstItem="QSr-VM-IN6" firstAttribute="trailing" secondItem="goy-3p-u67" secondAttribute="trailing" id="klr-8C-4BZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="goy-3p-u67"/>
                     </view>
                     <navigationItem key="navigationItem" title="Beer List" id="aw0-SF-7aT"/>
                     <connections>
+                        <outlet property="noResultLabel" destination="hhg-9L-fk9" id="BKn-l3-t7v"/>
                         <outlet property="searchBar" destination="S0d-dN-lTj" id="leM-TB-Jzp"/>
                         <outlet property="tableView" destination="QSr-VM-IN6" id="pp8-Gn-ztf"/>
                     </connections>

@@ -14,6 +14,7 @@ final class ItemsListController: UIViewController, ItemsListView {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noResultLabel: UILabel!
     
     var searchString: BehaviorSubject<String?> = BehaviorSubject<String?>(value: nil)
     var onItemSelect: ((ItemList) -> Void)?
@@ -42,9 +43,14 @@ final class ItemsListController: UIViewController, ItemsListView {
             }
             .disposed(by: disposeBag)
         
-        itemsList?.drive(onNext: { (items) in
-            if items.count == 0 { print("NO RESULTS") }
+        itemsList?.drive(onNext: { [noResultLabel] (items) in
+            noResultLabel?.isHidden = items.isNotEmpty
         }).disposed(by: disposeBag)
+        
+//        itemsList?.asObservable()
+//            .map { $0.isNotEmpty }
+//            .bind(to: noResultLabel.rx.isHidden)
+//            .disposed(by: disposeBag)
 
         tableView.rx
             .modelSelected(ItemList.self)
