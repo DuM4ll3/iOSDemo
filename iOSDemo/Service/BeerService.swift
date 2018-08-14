@@ -9,7 +9,7 @@
 import Moya
 
 enum BeerApi {
-    case beers(page: Int, perPage: Int)
+    case beers(page: Int, perPage: Int, food: String)
 }
 
 extension BeerApi: TargetType {
@@ -37,8 +37,9 @@ extension BeerApi: TargetType {
     
     var task: Task {
         switch self {
-        case .beers(let page, let perPage): return .requestParameters(parameters: ["page": page,
-                                                                                   "per_page": perPage], encoding: URLEncoding.default)
+        case .beers(let page, let perPage, let food): return .requestParameters(parameters: ["page": page,
+                                                                                             "per_page": perPage,
+                                                                                             "food": food], encoding: URLEncoding.default)
         }
     }
     

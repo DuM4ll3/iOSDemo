@@ -10,8 +10,6 @@ final class ItemCoordinator: BaseCoordinator {
     private let factory: ItemModuleFactory
     private let router: Router
     
-    private lazy var manager: BeerManager = BeerManager()
-    
     init(router: Router, factory: ItemModuleFactory) {
         self.router = router
         self.factory = factory
@@ -23,7 +21,10 @@ final class ItemCoordinator: BaseCoordinator {
     private func showItemList() {
         
         let itemsOutput = factory.makeItemsOutput()
-        itemsOutput.onItemsDidLoad = { return self.manager.beers }
+        // FIXME: manager as DI
+        var manager = BeerManager(with: itemsOutput.searchString.filterNil())
+
+        itemsOutput.itemsList = manager.beers
         itemsOutput.onItemSelect = { [weak self] (item) in
             self?.showItemDetail(item)
         }

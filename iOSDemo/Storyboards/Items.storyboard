@@ -18,8 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="E.g. salad, meat" translatesAutoresizingMaskIntoConstraints="NO" id="S0d-dN-lTj">
+                                <rect key="frame" x="0.0" y="20" width="320" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="QSr-VM-IN6">
-                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="76" width="320" height="404"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Tcd-ge-GXs" detailTextLabel="4tJ-TH-czi" imageView="bLY-Og-082" style="IBUITableViewCellStyleSubtitle" id="UZm-e3-9f9" customClass="ItemListCellView" customModule="iOSDemo" customModuleProvider="target">
@@ -56,14 +60,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="QSr-VM-IN6" firstAttribute="leading" secondItem="goy-3p-u67" secondAttribute="leading" id="0iY-2d-vQz"/>
-                            <constraint firstItem="QSr-VM-IN6" firstAttribute="top" secondItem="goy-3p-u67" secondAttribute="top" id="DYT-tM-9Ws"/>
+                            <constraint firstItem="QSr-VM-IN6" firstAttribute="top" secondItem="S0d-dN-lTj" secondAttribute="bottom" id="BPb-bg-L1O"/>
+                            <constraint firstItem="S0d-dN-lTj" firstAttribute="trailing" secondItem="goy-3p-u67" secondAttribute="trailing" id="UrR-nN-y3E"/>
+                            <constraint firstItem="S0d-dN-lTj" firstAttribute="top" secondItem="goy-3p-u67" secondAttribute="top" id="b5s-CP-ASr"/>
                             <constraint firstItem="QSr-VM-IN6" firstAttribute="bottom" secondItem="goy-3p-u67" secondAttribute="bottom" id="dnV-dd-j4R"/>
+                            <constraint firstItem="S0d-dN-lTj" firstAttribute="leading" secondItem="goy-3p-u67" secondAttribute="leading" id="i9v-h5-ycr"/>
                             <constraint firstItem="QSr-VM-IN6" firstAttribute="trailing" secondItem="goy-3p-u67" secondAttribute="trailing" id="klr-8C-4BZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="goy-3p-u67"/>
                     </view>
                     <navigationItem key="navigationItem" title="Beer List" id="aw0-SF-7aT"/>
                     <connections>
+                        <outlet property="searchBar" destination="S0d-dN-lTj" id="leM-TB-Jzp"/>
                         <outlet property="tableView" destination="QSr-VM-IN6" id="pp8-Gn-ztf"/>
                     </connections>
                 </viewController>

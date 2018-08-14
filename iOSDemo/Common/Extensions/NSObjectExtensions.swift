@@ -13,3 +13,10 @@ extension NSObject {
         return NSStringFromClass(self).components(separatedBy: ".").last!
     }
 }
+
+extension String {
+    var isBlank: Bool {
+        let trimmed = self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        return trimmed.isEmpty
+    }
+}

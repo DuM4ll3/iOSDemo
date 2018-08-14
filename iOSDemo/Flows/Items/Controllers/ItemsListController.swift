@@ -12,10 +12,12 @@ import RxSwift
 
 final class ItemsListController: UIViewController, ItemsListView {
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    var searchString: BehaviorSubject<String?> = BehaviorSubject<String?>(value: nil)
     var onItemSelect: ((ItemList) -> Void)?
-    var onItemsDidLoad: (() -> Driver<[ItemList]>)?
+    var itemsList: Driver<[ItemList]>?
     
     private let disposeBag = DisposeBag()
     
@@ -26,7 +28,15 @@ final class ItemsListController: UIViewController, ItemsListView {
     
     private func setup() {
         
-        onItemsDidLoad?()
+        searchBar.rx
+            .text.orEmpty
+            .debounce(0.5, scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .filter { !$0.isBlank }
+            .bind(to: searchString)
+            .disposed(by: disposeBag)
+        
+        itemsList?
             .drive(tableView.rx.items(cellIdentifier: "Cell", cellType: ItemListCellView.self)) { (row, item, cell) in
                 cell.item = item
             }

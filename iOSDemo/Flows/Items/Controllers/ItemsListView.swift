@@ -7,8 +7,10 @@
 //
 
 import RxCocoa
+import RxSwift
 
 protocol ItemsListView: BaseView {
-    var onItemsDidLoad: (() -> Driver<[ItemList]>)? { get set }
+    var searchString: BehaviorSubject<String?> { get set }
+    var itemsList: Driver<[ItemList]>? { get set }
     var onItemSelect: ((ItemList) -> Void)? { get set }
 }
