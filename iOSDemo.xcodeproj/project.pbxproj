@@ -12,7 +12,6 @@
 		537E3930210F6380005A7997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537E392E210F6380005A7997 /* Main.storyboard */; };
 		537E3932210F6382005A7997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537E3931210F6382005A7997 /* Assets.xcassets */; };
 		537E3935210F6382005A7997 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537E3933210F6382005A7997 /* LaunchScreen.storyboard */; };
-		537E3948211078E6005A7997 /* IssueTrackerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537E3947211078E6005A7997 /* IssueTrackerManager.swift */; };
 		537E39542110C357005A7997 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537E39532110C357005A7997 /* Storyboards.swift */; };
 		537E395A2111B880005A7997 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537E39592111B880005A7997 /* UIViewControllerExtensions.swift */; };
 		537E395C2111B8E6005A7997 /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537E395B2111B8E6005A7997 /* NSObjectExtensions.swift */; };
@@ -58,7 +57,6 @@
 		537E3931210F6382005A7997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		537E3934210F6382005A7997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		537E3936210F6382005A7997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		537E3947211078E6005A7997 /* IssueTrackerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTrackerManager.swift; sourceTree = "<group>"; };
 		537E39532110C357005A7997 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		537E39592111B880005A7997 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		537E395B2111B8E6005A7997 /* NSObjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 		537E39462110785D005A7997 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				537E3947211078E6005A7997 /* IssueTrackerManager.swift */,
 				539B5BC8211354D6002014B2 /* BeerManager.swift */,
 			);
 			path = Managers;
@@ -535,7 +532,6 @@
 				539B5BC321134453002014B2 /* BeerService.swift in Sources */,
 				537E395E2111BA17005A7997 /* Coordinator.swift in Sources */,
 				539B5B9921120471002014B2 /* ItemList.swift in Sources */,
-				537E3948211078E6005A7997 /* IssueTrackerManager.swift in Sources */,
 				539B5B9D211207B9002014B2 /* ItemDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,7 +679,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOSDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = demo.iOSDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -698,7 +697,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOSDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = demo.iOSDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -41,6 +41,10 @@ final class ItemsListController: UIViewController, ItemsListView {
                 cell.item = item
             }
             .disposed(by: disposeBag)
+        
+        itemsList?.drive(onNext: { (items) in
+            if items.count == 0 { print("NO RESULTS") }
+        }).disposed(by: disposeBag)
 
         tableView.rx
             .modelSelected(ItemList.self)
